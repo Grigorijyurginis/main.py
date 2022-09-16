@@ -1,0 +1,23 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %} Пользователи {% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Пользователи</h1>
+        <p>На данной странице представлены заполненные формы</p>
+        <a href="{% url 'index' %}"><li><button class="btn btn-warning">На главную</li></a>
+        {% if a %}
+            {% for el in a %}
+                <div class ="alert alert-dark">
+                    <h2>{{ el.name }}</h2>
+                    <h3>{{ el.sourname }}</h3>
+                    <h4>{{ el.age }}</h4>
+                    <h5>{{ el.comment}}</h5>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class = "alert alert-danger">Формы еще не заполнены!!!</p>
+        {% endif %}
+    </div>
+{% endblock %}

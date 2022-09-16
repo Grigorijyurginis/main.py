@@ -1,0 +1,20 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %} Заполнение формы {% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Заполнение формы</h1>
+        <h4>Пожалуйста, введите данные в форму</h4>
+        <a href="{% url 'index' %}"><li><button class="btn btn-warning">На главную</li></a>
+        <form method="post">
+            {% csrf_token %}
+            {{ a.name }}<br>
+            {{ a.sourname }}<br>
+            {{ a.age }}<br>
+            {{ a.comment }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Готово</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main/loyout.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Главная страница</h1>
+        <p>Пожалуйста, заполните форму для демонстрации работы сайта</p>
+        <a href="{% url 'create' %}"><li><button class="btn btn-warning">Заполнить форму</li></a>
+            <div class="lead">
+                <h2>Описание:</h2>
+                <h3>На данном сайте пользователь может рассказать о себе. Информация будет храниться в отдельной форме.</h3>
+            </div>
+    </div>
+{% endblock %}
+
